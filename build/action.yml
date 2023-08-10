@@ -15,7 +15,7 @@
       uses: actions/upload-artifact@v1
       with:
         name: functionapp
-        path: ./output,
+        path: ./output
 
     - name: Checkout
       uses: actions/checkout@v2.5.0
