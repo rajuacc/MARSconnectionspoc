@@ -1,0 +1,53 @@
+ name: Deploy LA
+ inputs:
+   path_settings:
+     required: true
+   rg_name:
+     required: true
+   la_name:
+     required: true
+ runs:
+   using: "composite"
+   steps:
+    - name: Download a Build Artifact
+      uses: actions/download-artifact@v3.0.1
+      with:
+        # Artifact name
+        name:  marslogicapp
+        # Destination path
+        path: ./LogicApps/output/
+        
+    - name: "Read file contents"
+      id: read_file
+      uses: andstor/file-reader-action@v1
+      with:
+        path: ${{inputs.path_settings}} 
+    
+    - name: Adding App Settings
+      uses: azure/appservice-settings@v1
+      with:
+        app-name: ${{inputs.la_names}}
+        mask-inputs: false
+        app-settings-json: ${{steps.read_file.outputs.contents}}
+        
+#     - name: Adding Connections
+#       shell: pwsh
+#       run: New-AzResourceGroupDeployment -Name "apiconnection" -ResourceGroupName "${{ env.RG_DEV }}" -TemplateFile "./Src/LogicApps/Connections/StorageAPiConnectorTemplate.json" -TemplateParameterFile "./Src/LogicApps/Connections/StorageApiConnectorparameters.json"
+
+                        
+    - name: Get publish Profile
+      id: publishprofile
+      shell: pwsh
+      run:    $profile = Get-AzWebAppPublishingProfile -ResourceGroupName ${{inputs.rg_names}} -Name ${{inputs.la_names}} -Format "Ftp" -OutputFile "./LogicApps/output/outputfile.publishsettings"       
+              
+              $profile = $profile.Replace("`r", "").Replace("`n", "")
+              
+              Write-Output "::set-output name=profile::$profile"          
+          
+    - name: Deploy to Azure Logic App
+      uses: Azure/functions-action@v1.4.8
+      id: la
+      with:
+        app-name: ${{inputs.la_names}}
+        package: "LogicApps/output/marslogicapp.zip"
+        publish-profile: "${{steps.publishprofile.outputs.profile}}"

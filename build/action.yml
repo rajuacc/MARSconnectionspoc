@@ -1,0 +1,31 @@
+  name: build 
+  runs: 
+    using: "composite"
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2.5.0
+    - name: Setup DotNet ${{ env.DOTNET_VERSION }} Environment
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: ${{ env.DOTNET_VERSION }}
+    - name: Publish Functions
+      shell: pwsh
+      run: dotnet publish ./**/*.csproj --configuration Release --output ./output       
+    - name: Package Functions
+      uses: actions/upload-artifact@v1
+      with:
+        name: functionapp
+        path: ./output,
+
+    - name: Checkout
+      uses: actions/checkout@v2.5.0
+    - name: Package logic
+      shell: pwsh
+      run: cd LogicApps/Workflows/; mkdir -p ../output; Compress-Archive -Path * -DestinationPath  ../output/marslogicapp.zip 
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v3.1.1
+      with:
+        # Artifact name
+        name: marslogicapp
+        # A file, directory or wildcard pattern that describes what to upload
+        path:  ./LogicApps/output/

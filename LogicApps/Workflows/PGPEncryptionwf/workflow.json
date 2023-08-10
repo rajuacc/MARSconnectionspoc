@@ -1,0 +1,102 @@
+{
+    "definition": {
+        "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+        "actions": {
+            "PGP_Encryption": {
+                "type": "InvokeFunction",
+                "inputs": {
+                    "functionName": "PGPFucntion",
+                    "parameters": {
+                        "key": "@{body('Read_blob_content_laetst')?['content']}",
+                        "MessageContent": "@{outputs('Compose_7')}"
+                    }
+                },
+                "runAfter": {
+                    "Read_blob_content_laetst": [
+                        "SUCCEEDED"
+                    ]
+                }
+            },
+            "Response": {
+                "type": "Response",
+                "kind": "http",
+                "inputs": {
+                    "statusCode": 200,
+                    "body": "@body('PGP_Encryption')"
+                },
+                "runAfter": {
+                    "response_of_decrypt_function": [
+                        "SUCCEEDED"
+                    ]
+                }
+            },
+            "Compose_7": {
+                "type": "Compose",
+                "inputs": "This is a test message for encryption privte key from kv",
+                "runAfter": {}
+            },
+            "response_encryption_function": {
+                "type": "Compose",
+                "inputs": "@body('PGP_Encryption')",
+                "runAfter": {
+                    "PGP_Encryption": [
+                        "Succeeded"
+                    ]
+                }
+            },
+            "Read_blob_content_laetst": {
+                "type": "ServiceProvider",
+                "inputs": {
+                    "parameters": {
+                        "containerName": "container1",
+                        "blobName": "PGPKey.txt"
+                    },
+                    "serviceProviderConfiguration": {
+                        "connectionName": "AzureBlob",
+                        "operationId": "readBlob",
+                        "serviceProviderId": "/serviceProviders/AzureBlob"
+                    }
+                },
+                "runAfter": {
+                    "Compose_7": [
+                        "SUCCEEDED"
+                    ]
+                }
+            },
+            "Call_a_local_function_for_decryption": {
+                "type": "InvokeFunction",
+                "inputs": {
+                    "functionName": "PGPDecrypt",
+                    "parameters": {
+                        "Privatekey": "@{appsetting('privatekey')}",
+                        "MessageContent": "@body('PGP_Encryption')"
+                    }
+                },
+                "runAfter": {
+                    "response_encryption_function": [
+                        "SUCCEEDED"
+                    ]
+                }
+            },
+            "response_of_decrypt_function": {
+                "type": "Compose",
+                "inputs": "@body('Call_a_local_function_for_decryption')",
+                "runAfter": {
+                    "Call_a_local_function_for_decryption": [
+                        "SUCCEEDED"
+                    ]
+                }
+            }
+        },
+        "triggers": {
+            "When_a_HTTP_request_is_received": {
+                "type": "Request",
+                "kind": "Http"
+            }
+        },
+        "contentVersion": "1.0.0.0",
+        "outputs": {},
+        "parameters": {}
+    },
+    "kind": "Stateful"
+}

@@ -1,0 +1,60 @@
+{
+  "Name": null,
+  "ScriptFile": "../bin/PGPFucntion.dll",
+  "FunctionDirectory": null,
+  "EntryPoint": "PGPNamespace.PGPFucntion.Run",
+  "Language": null,
+  "Properties": {},
+  "Bindings": [
+    {
+      "Name": "key",
+      "Connection": null,
+      "Type": "workflowActionTrigger",
+      "Direction": "In",
+      "DataType": null,
+      "Cardinality": null,
+      "IsTrigger": true,
+      "IsReturn": false,
+      "Raw": null
+    }
+  ],
+  "InputBindings": [
+    {
+      "Name": "key",
+      "Connection": null,
+      "Type": "workflowActionTrigger",
+      "Direction": "In",
+      "DataType": null,
+      "Cardinality": null,
+      "IsTrigger": true,
+      "IsReturn": false,
+      "Raw": null
+    }
+  ],
+  "OutputBindings": [],
+  "Trigger": {
+    "Name": "key",
+    "Connection": null,
+    "Type": "workflowActionTrigger",
+    "Direction": "In",
+    "DataType": null,
+    "Cardinality": null,
+    "IsTrigger": true,
+    "IsReturn": false,
+    "Raw": null
+  },
+  "InputSchema": {
+    "type": "object",
+    "properties": {
+      "key": {
+        "type": "string"
+      },
+      "MessageContent": {
+        "type": "string"
+      }
+    }
+  },
+  "OutputSchema": {
+    "type": "string"
+  }
+}

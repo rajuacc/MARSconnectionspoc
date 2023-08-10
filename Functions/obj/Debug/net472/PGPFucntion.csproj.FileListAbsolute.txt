@@ -1,0 +1,17 @@
+C:\Users\yelisi.appala.raju\Desktop\MARS\POC\ManualPGPencryption\Functions\bin\Debug\net472\PGPFucntion.dll
+C:\Users\yelisi.appala.raju\Desktop\MARS\POC\ManualPGPencryption\Functions\bin\Debug\net472\PGPFucntion.pdb
+C:\Users\yelisi.appala.raju\Desktop\MARS\POC\ManualPGPencryption\Functions\bin\Debug\net472\BouncyCastle.Cryptography.dll
+C:\Users\yelisi.appala.raju\Desktop\MARS\POC\ManualPGPencryption\Functions\bin\Debug\net472\Microsoft.Azure.WebJobs.dll
+C:\Users\yelisi.appala.raju\Desktop\MARS\POC\ManualPGPencryption\Functions\bin\Debug\net472\Microsoft.Azure.Functions.Extensions.Workflows.Sdk.BuildTasks.dll
+C:\Users\yelisi.appala.raju\Desktop\MARS\POC\ManualPGPencryption\Functions\bin\Debug\net472\Microsoft.Azure.Functions.Extensions.Workflows.Sdk.Package.dll
+C:\Users\yelisi.appala.raju\Desktop\MARS\POC\ManualPGPencryption\Functions\bin\Debug\net472\Microsoft.Azure.Functions.Extensions.Workflows.Sdk.dll
+C:\Users\yelisi.appala.raju\Desktop\MARS\POC\ManualPGPencryption\Functions\bin\Debug\net472\PgpCore.dll
+C:\Users\yelisi.appala.raju\Desktop\MARS\POC\ManualPGPencryption\Functions\bin\Debug\net472\System.ComponentModel.Annotations.dll
+C:\Users\yelisi.appala.raju\Desktop\MARS\POC\ManualPGPencryption\Functions\obj\Debug\net472\PGPFucntion.csproj.AssemblyReference.cache
+C:\Users\yelisi.appala.raju\Desktop\MARS\POC\ManualPGPencryption\Functions\obj\Debug\net472\PGPFucntion.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yelisi.appala.raju\Desktop\MARS\POC\ManualPGPencryption\Functions\obj\Debug\net472\PGPFucntion.AssemblyInfoInputs.cache
+C:\Users\yelisi.appala.raju\Desktop\MARS\POC\ManualPGPencryption\Functions\obj\Debug\net472\PGPFucntion.AssemblyInfo.cs
+C:\Users\yelisi.appala.raju\Desktop\MARS\POC\ManualPGPencryption\Functions\obj\Debug\net472\PGPFucntion.csproj.CoreCompileInputs.cache
+C:\Users\yelisi.appala.raju\Desktop\MARS\POC\ManualPGPencryption\Functions\obj\Debug\net472\PGPFucntion.csproj.CopyComplete
+C:\Users\yelisi.appala.raju\Desktop\MARS\POC\ManualPGPencryption\Functions\obj\Debug\net472\PGPFucntion.dll
+C:\Users\yelisi.appala.raju\Desktop\MARS\POC\ManualPGPencryption\Functions\obj\Debug\net472\PGPFucntion.pdb

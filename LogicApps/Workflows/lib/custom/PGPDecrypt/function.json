@@ -1,0 +1,60 @@
+{
+  "Name": null,
+  "ScriptFile": "../bin/PGPFucntion.dll",
+  "FunctionDirectory": null,
+  "EntryPoint": "PGPNamespace.PGPDecrypt.Run",
+  "Language": null,
+  "Properties": {},
+  "Bindings": [
+    {
+      "Name": "Privatekey",
+      "Connection": null,
+      "Type": "workflowActionTrigger",
+      "Direction": "In",
+      "DataType": null,
+      "Cardinality": null,
+      "IsTrigger": true,
+      "IsReturn": false,
+      "Raw": null
+    }
+  ],
+  "InputBindings": [
+    {
+      "Name": "Privatekey",
+      "Connection": null,
+      "Type": "workflowActionTrigger",
+      "Direction": "In",
+      "DataType": null,
+      "Cardinality": null,
+      "IsTrigger": true,
+      "IsReturn": false,
+      "Raw": null
+    }
+  ],
+  "OutputBindings": [],
+  "Trigger": {
+    "Name": "Privatekey",
+    "Connection": null,
+    "Type": "workflowActionTrigger",
+    "Direction": "In",
+    "DataType": null,
+    "Cardinality": null,
+    "IsTrigger": true,
+    "IsReturn": false,
+    "Raw": null
+  },
+  "InputSchema": {
+    "type": "object",
+    "properties": {
+      "Privatekey": {
+        "type": "string"
+      },
+      "MessageContent": {
+        "type": "string"
+      }
+    }
+  },
+  "OutputSchema": {
+    "type": "string"
+  }
+}

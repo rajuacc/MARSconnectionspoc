@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "v/IkazOKupGQmuma6XoA4lv5Ir1v2X0jbALiX7y+vbS7CJpswWHdlO3Z++DlMWyIo/z3Lb9ravJLLUVUQjIoTw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\yelisi.appala.raju\\Desktop\\MARS\\POC\\ManualPGPencryption\\Functions\\PGPFucntion.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\yelisi.appala.raju\\.nuget\\packages\\bouncycastle.cryptography\\2.1.1\\bouncycastle.cryptography.2.1.1.nupkg.sha512",
+    "C:\\Users\\yelisi.appala.raju\\.nuget\\packages\\microsoft.azure.webjobs.core\\3.0.33\\microsoft.azure.webjobs.core.3.0.33.nupkg.sha512",
+    "C:\\Users\\yelisi.appala.raju\\.nuget\\packages\\microsoft.azure.workflows.webjobs.sdk\\1.0.1-preview\\microsoft.azure.workflows.webjobs.sdk.1.0.1-preview.nupkg.sha512",
+    "C:\\Users\\yelisi.appala.raju\\.nuget\\packages\\microsoft.net.sdk.functions\\4.2.0\\microsoft.net.sdk.functions.4.2.0.nupkg.sha512",
+    "C:\\Users\\yelisi.appala.raju\\.nuget\\packages\\pgpcore\\5.10.0\\pgpcore.5.10.0.nupkg.sha512",
+    "C:\\Users\\yelisi.appala.raju\\.nuget\\packages\\system.componentmodel.annotations\\4.4.0\\system.componentmodel.annotations.4.4.0.nupkg.sha512",
+    "C:\\Users\\yelisi.appala.raju\\.nuget\\packages\\system.diagnostics.tracesource\\4.3.0\\system.diagnostics.tracesource.4.3.0.nupkg.sha512"
+  ],
+  "logs": []
+}
