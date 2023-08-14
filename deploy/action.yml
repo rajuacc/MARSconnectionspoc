@@ -17,18 +17,18 @@
         # Destination path
         path: ./LogicApps/output/
         
-   # - name: "Read file contents"
-   #   id: read_file
-   #   uses: andstor/file-reader-action@v1
-   #   with:
-   #     path: ${{inputs.path_settings}} 
+    - name: "Read file contents"
+      id: read_file
+      uses: andstor/file-reader-action@v1
+      with:
+        path: "LogicApps/Workflows/settings.json"
     
-   # - name: Adding App Settings
-   #   uses: azure/appservice-settings@v1
-   #   with:
-   #     app-name: ${{inputs.la_names}}
-   #     mask-inputs: false
-   #     app-settings-json: ${{steps.read_file.outputs.contents}}
+    - name: Adding App Settings
+      uses: azure/appservice-settings@v1
+      with:
+        app-name: ${{inputs.la_names}}
+        mask-inputs: false
+        app-settings-json: ${{steps.read_file.outputs.contents}}
         
 #     - name: Adding Connections
 #       shell: pwsh
