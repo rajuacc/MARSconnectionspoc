@@ -32,7 +32,7 @@
             },
             "Compose_7": {
                 "type": "Compose",
-                "inputs": "This is a test message for encryption privte key from kv",
+                "inputs": "This is a test message for encryption",
                 "runAfter": {}
             },
             "response_encryption_function": {
