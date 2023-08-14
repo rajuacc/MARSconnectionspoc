@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "v/IkazOKupGQmuma6XoA4lv5Ir1v2X0jbALiX7y+vbS7CJpswWHdlO3Z++DlMWyIo/z3Lb9ravJLLUVUQjIoTw==",
+  "dgSpecHash": "ZZuflawdP20CWNq/JE07Upku56HhJUUjDPhT6S4ZGmTIuOkWieFnZiJJcE7Fm2tQAsmhsEiuNGMumSjL5ZIP/w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\yelisi.appala.raju\\Desktop\\MARS\\POC\\ManualPGPencryption\\Functions\\PGPFucntion.csproj",
+  "projectFilePath": "C:\\Users\\yelisi.appala.raju\\Desktop\\MARS\\POC\\Repo\\foldermanipulation\\MARSconnectionspoc\\Functions\\PGPFucntion.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\yelisi.appala.raju\\.nuget\\packages\\bouncycastle.cryptography\\2.1.1\\bouncycastle.cryptography.2.1.1.nupkg.sha512",
     "C:\\Users\\yelisi.appala.raju\\.nuget\\packages\\microsoft.azure.webjobs.core\\3.0.33\\microsoft.azure.webjobs.core.3.0.33.nupkg.sha512",

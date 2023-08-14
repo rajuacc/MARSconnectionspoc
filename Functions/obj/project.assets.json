@@ -925,11 +925,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\yelisi.appala.raju\\Desktop\\MARS\\POC\\ManualPGPencryption\\Functions\\PGPFucntion.csproj",
+      "projectUniqueName": "C:\\Users\\yelisi.appala.raju\\Desktop\\MARS\\POC\\Repo\\foldermanipulation\\MARSconnectionspoc\\Functions\\PGPFucntion.csproj",
       "projectName": "PGPFucntion",
-      "projectPath": "C:\\Users\\yelisi.appala.raju\\Desktop\\MARS\\POC\\ManualPGPencryption\\Functions\\PGPFucntion.csproj",
+      "projectPath": "C:\\Users\\yelisi.appala.raju\\Desktop\\MARS\\POC\\Repo\\foldermanipulation\\MARSconnectionspoc\\Functions\\PGPFucntion.csproj",
       "packagesPath": "C:\\Users\\yelisi.appala.raju\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\yelisi.appala.raju\\Desktop\\MARS\\POC\\ManualPGPencryption\\Functions\\obj\\",
+      "outputPath": "C:\\Users\\yelisi.appala.raju\\Desktop\\MARS\\POC\\Repo\\foldermanipulation\\MARSconnectionspoc\\Functions\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\yelisi.appala.raju\\AppData\\Roaming\\NuGet\\NuGet.Config",

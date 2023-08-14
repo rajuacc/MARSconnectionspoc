@@ -32,7 +32,7 @@
             },
             "Compose_7": {
                 "type": "Compose",
-                "inputs": "This is a test message for encryption",
+                "inputs": "This is a test message for encryption privte key from kv",
                 "runAfter": {}
             },
             "response_encryption_function": {
@@ -68,7 +68,6 @@
                 "inputs": {
                     "functionName": "PGPDecrypt",
                     "parameters": {
-                        "Privatekey": "@{appsetting('privatekey')}",
                         "MessageContent": "@body('PGP_Encryption')"
                     }
                 },

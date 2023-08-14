@@ -7,7 +7,7 @@
   "Properties": {},
   "Bindings": [
     {
-      "Name": "Privatekey",
+      "Name": "MessageContent",
       "Connection": null,
       "Type": "workflowActionTrigger",
       "Direction": "In",
@@ -20,7 +20,7 @@
   ],
   "InputBindings": [
     {
-      "Name": "Privatekey",
+      "Name": "MessageContent",
       "Connection": null,
       "Type": "workflowActionTrigger",
       "Direction": "In",
@@ -33,7 +33,7 @@
   ],
   "OutputBindings": [],
   "Trigger": {
-    "Name": "Privatekey",
+    "Name": "MessageContent",
     "Connection": null,
     "Type": "workflowActionTrigger",
     "Direction": "In",
@@ -46,9 +46,6 @@
   "InputSchema": {
     "type": "object",
     "properties": {
-      "Privatekey": {
-        "type": "string"
-      },
       "MessageContent": {
         "type": "string"
       }

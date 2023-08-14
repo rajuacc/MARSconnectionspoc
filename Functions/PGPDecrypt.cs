@@ -13,10 +13,12 @@ namespace PGPNamespace
     {        
 
         [FunctionName("PGPDecrypt")]
-        public async Task<string> Run([WorkflowActionTrigger] string Privatekey, string MessageContent)
+        public async Task<string> Run([WorkflowActionTrigger] string MessageContent)
         {
             //Stream privateKeyStream = new Stream(Privatekey);
-            EncryptionKeys encryptionKeys = new EncryptionKeys(Privatekey,"password");
+            var privatekey= Environment.GetEnvironmentVariable("privatekey");
+            var paswword= Environment.GetEnvironmentVariable("paswword");
+            EncryptionKeys encryptionKeys = new EncryptionKeys(privatekey,paswword);
             var inputStream = GenerateStreamFromString(MessageContent);
             PGP pgp = new PGP(encryptionKeys);
             string DecryptMessage;
