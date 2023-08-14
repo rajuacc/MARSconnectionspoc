@@ -3,5 +3,10 @@
         "name": "WEBSITE_RUN_FROM_PACKAGE",
         "value": "0",
         "slotSetting": false
+    },
+    {
+        "name": "TestingParameter",
+        "value": "test",
+        "slotSetting": false
     }
 ]
