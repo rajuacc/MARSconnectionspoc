@@ -26,7 +26,7 @@
     - name: Adding App Settings
       uses: azure/appservice-settings@v1
       with:
-        app-name: ${{inputs.la_names}}
+        app-name: "PGPencryptionla-raju"
         mask-inputs: false
         app-settings-json: ${{steps.read_file.outputs.contents}}
         
@@ -49,6 +49,6 @@
       uses: Azure/functions-action@v1.4.8
       id: la
       with:
-        app-name: "ManualWorkspacela"
+        app-name: "PGPencryptionla-raju"
         package: "LogicApps/output/marslogicapp.zip"
         publish-profile: ${{env.LOGICAPP_PUBLISHPROFILE}}
